@@ -1,6 +1,6 @@
 package com.example.teamworklesson7compose.data.remote.apiservices
 
-import com.example.android4_5.data.remote.models.character.CharacterResponse
+import com.example.teamworklesson7compose.data.models.character.CharacterResponse
 import retrofit2.http.GET
 
 
