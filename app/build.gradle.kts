@@ -1,10 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    // Kapt
     kotlin("kapt")
-
-    // Hilt
     id("com.google.dagger.hilt.android")
 }
 
@@ -72,6 +69,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+
     // Hilt
     //noinspection UseTomlInstead
     implementation("com.google.dagger:hilt-android:2.48")
@@ -99,4 +97,5 @@ dependencies {
 
     //AsyncImage
     implementation("io.coil-kt:coil-compose:2.6.0")
+
 }
