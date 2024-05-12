@@ -11,9 +11,9 @@ import javax.inject.Inject
 class RickAndMortyRepositoryImpl @Inject constructor(private val apiService: RickAndMortyApi)
     : RickAndMortyRepository, BaseRepository() {
     override suspend fun getCharacters(): Flow<Either<Throwable, List<ResultsItemCharacters>>>  =
-        doRequest {
-            apiService.getCharacters().results
-        }
+       doRequest {
+           apiService.getCharacters().results
+       }
 
 
 }
