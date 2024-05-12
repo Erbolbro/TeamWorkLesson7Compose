@@ -19,4 +19,10 @@ object UseCasesModule {
     fun provideGetCharactersUseCase(repository: RickAndMortyRepository): GetCharactersUseCase {
         return GetCharactersUseCase(repository)
     }
+
+    @Provides
+    @Singleton
+    fun provideRickAndMortyRepository(implementation: RickAndMortyRepositoryImpl): RickAndMortyRepository {
+        return implementation
+    }
 }
