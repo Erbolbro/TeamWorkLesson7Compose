@@ -5,12 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.android4_5.data.remote.models.character.ResultsItemCharacters
-import com.example.teamworklesson7compose.domain.Result
-import com.example.teamworklesson7compose.presentation.ui.screens.ImageAndText
+import com.example.teamworklesson7compose.presentation.ui.screens.CharacterScreen
+import com.example.teamworklesson7compose.presentation.ui.screens.LazyColumnCharacters
 import com.example.teamworklesson7compose.presentation.ui.theme.TeamWorkLesson7ComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ImageAndText(result = ResultsItemCharacters(image = "Image"))
+                    CharacterScreen(modifier = Modifier.fillMaxSize())
                 }
             }
         }

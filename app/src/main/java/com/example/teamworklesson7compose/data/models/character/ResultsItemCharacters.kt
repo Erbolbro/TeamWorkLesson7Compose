@@ -1,5 +1,8 @@
-package com.example.android4_5.data.remote.models.character
+package com.example.teamworklesson7compose.data.models.character
 
+import com.example.android4_5.data.remote.models.character.Location
+import com.example.android4_5.data.remote.models.character.Origin
+import com.example.teamworklesson7compose.domain.entities.Character
 import com.google.gson.annotations.SerializedName
 
 data class ResultsItemCharacters(
@@ -28,3 +31,19 @@ data class ResultsItemCharacters(
     @SerializedName("status")
     val status: String = ""
 )
+
+fun ResultsItemCharacters.toDomain() =
+    Character(
+        image,
+        gender,
+        species,
+        created,
+        origin,
+        name,
+        location,
+        episode,
+        id,
+        type,
+        url,
+        status
+    )
