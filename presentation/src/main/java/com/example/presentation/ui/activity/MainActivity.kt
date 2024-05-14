@@ -1,4 +1,4 @@
-package com.example.teamworklesson7compose
+package com.example.presentation.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

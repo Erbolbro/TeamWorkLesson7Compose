@@ -99,4 +99,12 @@ dependencies {
 
     //AsyncImage
     implementation("io.coil-kt:coil-compose:2.6.0")
+
+    //room
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+
+    implementation(project(":presentation"))
 }
