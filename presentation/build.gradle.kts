@@ -54,5 +54,4 @@ dependencies {
     implementation(libs.room)
     implementation(libs.navigation.compose)
     implementation(libs.bundles.okhttp)
-    implementation(libs.kapt)
-}
+    implementation(libs.kapt)}
