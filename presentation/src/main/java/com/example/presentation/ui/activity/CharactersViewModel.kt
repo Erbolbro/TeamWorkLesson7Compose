@@ -1,14 +1,12 @@
-package com.example.teamworklesson7compose.presentation.ui.activity
+package com.example.presentation.ui.activity
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.teamworklesson7compose.domain.entities.Character
-import com.example.teamworklesson7compose.domain.usecases.GetCharactersUseCase
-import com.example.teamworklesson7compose.utils.Either
-import com.example.teamworklesson7compose.utils.UIState
-import com.example.teamworklesson7compose.utils.base.BaseViewModel
+import com.example.domain.Either
+import com.example.domain.usecases.GetCharactersUseCase
+import com.example.utils.UIState
+import com.example.utils.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
