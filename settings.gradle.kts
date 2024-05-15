@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "TeamWorkLesson7Compose"
 include(":app")
- 
+include(":domain")
+include(":presentation")
+include(":data")
