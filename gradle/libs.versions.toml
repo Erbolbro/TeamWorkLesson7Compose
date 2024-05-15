@@ -13,6 +13,7 @@ composeBom = "2023.08.00"
 jetbrainsKotlinJvm = "1.9.0"
 appcompat = "1.6.1"
 material = "1.12.0"
+navigation = "2.7.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +35,9 @@ kotlinx-coroutines-base = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-b
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+#Navigation
+navigation-fragment-ktx = {group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation"}
+
 room = "androidx.room:room-runtime:2.6.1"
 
 okhttp1 = {group = "com.squareup.okhttp3", name = "okhttp-bom", version.require = "4.12.0"}
@@ -50,6 +54,9 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+
+#Kapt
+jetbrains-kotlin-kapt = {id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin"}
 
 [bundles]
 okhttp = ["okhttp1","okhttp2","okhttp3"]

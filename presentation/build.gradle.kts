@@ -1,6 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+
+    kotlin("kapt")
+
+    // Hilt
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -30,10 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
-
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -54,5 +61,19 @@ dependencies {
     implementation(libs.room)
     implementation(libs.navigation.compose)
     implementation(libs.bundles.okhttp)
-    implementation(libs.kapt)
+    implementation(project(":domain"))
+    implementation(project(":data"))
+
+    // Hilt
+    //noinspection UseTomlInstead
+    implementation("com.google.dagger:hilt-android:2.51")
+    //noinspection UseTomlInstead
+    kapt("com.google.dagger:hilt-android-compiler:2.49")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    kapt("androidx.hilt:hilt-compiler:1.2.0")
+
+    //AsyncImage
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
+
 }

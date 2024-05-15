@@ -1,8 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    // Kapt
-    kotlin("kapt")
+    alias(libs.plugins.jetbrains.kotlin.kapt)
 
     // Hilt
     id("com.google.dagger.hilt.android")
@@ -72,15 +71,17 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.kapt)
+    implementation(project(":presentation"))
 
     // Hilt
     //noinspection UseTomlInstead
-    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("com.google.dagger:hilt-android:2.51")
     //noinspection UseTomlInstead
-    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.49")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
-    //noinspection UseTomlInstead
+//    //noinspection UseTomlInstead
     implementation("org.jetbrains:annotations:RELEASE_VERSION")
 
     // Retrofit_2
@@ -88,7 +89,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     //noinspection UseTomlInstead
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("androidx.compose.runtime:runtime-livedata:1.6.6")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
 
     // OkHttp
     //noinspection UseTomlInstead

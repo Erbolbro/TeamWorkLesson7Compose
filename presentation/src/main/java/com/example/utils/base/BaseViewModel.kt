@@ -1,10 +1,10 @@
-package com.example.teamworklesson7compose.utils.base
+package com.example.utils.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.teamworklesson7compose.utils.Either
-import com.example.teamworklesson7compose.utils.UIState
+import com.example.domain.Either
+import com.example.utils.UIState
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {

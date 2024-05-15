@@ -1,10 +1,9 @@
-package com.example.teamworklesson7compose.presentation.ui.screens
+package com.example.presentation.ui.screens
 
 import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
@@ -24,10 +23,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
-import com.example.teamworklesson7compose.R
-import com.example.teamworklesson7compose.domain.entities.Character
-import com.example.teamworklesson7compose.presentation.ui.activity.CharactersViewModel
-import com.example.teamworklesson7compose.utils.UIState
+import com.example.presentation.R
+import com.example.presentation.ui.activity.CharactersViewModel
+import com.example.utils.UIState
 
 
 @Composable
