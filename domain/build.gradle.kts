@@ -4,6 +4,10 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_18
-    targetCompatibility = JavaVersion.VERSION_18
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+dependencies {
+    implementation(project(":presentation"))
+    implementation(libs.kotlinx.coroutines.core)
 }
