@@ -58,7 +58,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation(libs.room)
+//    implementation(libs.room)
     implementation(libs.navigation.compose)
     implementation(libs.bundles.okhttp)
     implementation(project(":domain"))

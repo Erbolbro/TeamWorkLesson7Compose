@@ -1,4 +1,4 @@
-package com.example.teamworklesson7compose
+package com.example.teamworklesson7compos
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
