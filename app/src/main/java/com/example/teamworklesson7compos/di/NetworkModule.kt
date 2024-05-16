@@ -1,6 +1,6 @@
-package com.example.teamworklesson7compose.di
+package com.example.teamworklesson7compos.di
 
-import com.example.teamworklesson7compose.data.remote.apiservices.RickAndMortyApi
+import com.example.data.remote.apiservice.RickAndMortyApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -3,9 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.kapt)
 
-    // Hilt
-    id("com.google.dagger.hilt.android")
-
 }
 
 android {
@@ -64,6 +61,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(project(":data"))
+    implementation(project(":domain"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -84,20 +83,9 @@ dependencies {
 //    //noinspection UseTomlInstead
     implementation("org.jetbrains:annotations:RELEASE_VERSION")
 
-    // Retrofit_2
-    //noinspection UseTomlInstead
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    //noinspection UseTomlInstead
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
-
     // OkHttp
-    //noinspection UseTomlInstead
-    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
-    //noinspection UseTomlInstead
-    implementation("com.squareup.okhttp3:okhttp")
-    //noinspection UseTomlInstead
-    implementation("com.squareup.okhttp3:logging-interceptor")
+   implementation(libs.bundles.retrofit)
 
     //AsyncImage
     implementation("io.coil-kt:coil-compose:2.6.0")
