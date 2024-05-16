@@ -1,4 +1,4 @@
-package com.example.domain.epository
+package com.example.domain.repository
 
 import com.example.domain.Either
 import kotlinx.coroutines.flow.Flow

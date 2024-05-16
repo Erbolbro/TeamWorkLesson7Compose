@@ -1,8 +1,8 @@
-package com.example.teamworklesson7compose.di
+package com.example.teamworklesson7compos.di
 
-import com.example.teamworklesson7compose.data.remote.repository.RickAndMortyRepositoryImpl
-import com.example.teamworklesson7compose.domain.repository.RickAndMortyRepository
-import com.example.teamworklesson7compose.domain.usecases.GetCharactersUseCase
+import com.example.data.repository.RickAndMortyRepositoryImpl
+import com.example.domain.repository.RickAndMortyRepository
+import com.example.domain.usecases.GetCharactersUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,7 +22,7 @@ object UseCasesModule {
 
     @Provides
     @Singleton
-    fun provideRickAndMortyRepository(implementation: RickAndMortyRepositoryImpl): RickAndMortyRepository {
+    fun provideRickAndMortyRepository(implementation: RickAndMortyRepository): RickAndMortyRepository {
         return implementation
     }
 }
