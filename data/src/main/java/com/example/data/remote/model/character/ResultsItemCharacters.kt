@@ -1,6 +1,5 @@
 package com.example.data.remote.model.character
 
-import com.example.android4_5.data.remote.models.character.Origin
 import com.example.domain.entities.Character
 import com.google.gson.annotations.SerializedName
 

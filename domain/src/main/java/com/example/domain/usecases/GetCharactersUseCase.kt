@@ -1,6 +1,6 @@
 package com.example.domain.usecases
 
-import com.example.domain.Either
+import com.example.domain.entities.Character
 import com.example.domain.repository.RickAndMortyRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

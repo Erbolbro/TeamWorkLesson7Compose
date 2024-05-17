@@ -16,6 +16,11 @@ material = "1.12.0"
 retrofit  ="2.9.0"
 room_version = "2.6.1"
 composePreviewRenderer = "0.0.1-alpha01"
+hilt_version = "2.51"
+coil_version = "2.6.0"
+liveData_Compose_version = "1.6.7"
+hilt_kapt_version = "1.2.0"
+okktp_version = "4.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,17 +48,21 @@ retrofit-convertor-gson ={group = "com.squareup.retrofit2",name = "converter-gso
 room_runtime = {group = "androidx.room",name = "room-runtime",version.ref ="room_version"}
 room_compiler = {group = "androidx.room",name = "room-compiler", version.ref = "room_version"}
 room_ktx = {group = "androidx.room",name = "room-ktx", version.ref = "room_version"}
-
 # okhttp
-okhttp1 = {group = "com.squareup.okhttp3", name = "okhttp-bom", version.require = "4.12.0"}
+okhttp1 = {group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okktp_version"}
 okhttp2 = {group = "com.squareup.okhttp3", name = "okhttp"}
-okhttp3 = {group = "com.squareup.okhttp3", name = "logging-interceptor"}
-
+okhttp3 = {group = "com.squareup.okhttp3", name = "logging-interceptor",version.ref = "okktp_version"}
 #Navigation
 navigation-compose = {module = "androidx.navigation:navigation-compose", version = "2.7.7"}
-
 kapt = { module = "com.google.dagger:dagger-compiler", version = "2.38.1" }
 compose-preview-renderer = { group = "com.android.tools.compose", name = "compose-preview-renderer", version.ref = "composePreviewRenderer" }
+#Hilt
+dagger_hilt  = {group ="com.google.dagger",name = "hilt.android", version.ref = "hilt_version"}
+dagger_compiler  = {group ="com.google.dagger",name = "hilt.compiler", version.ref = "hilt_version"}
+hilt_navigation = {group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt_kapt_version" }
+#AsyncImage
+coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil_version"}
+liveData_compose = {group ="androidx.compose.runtime", name = "runtime-livedata", version.ref = "liveData_Compose_version"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -61,9 +70,14 @@ jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = 
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 #Kapt
+hilt_kapt  ={id = "com.google.dagger.hilt.android",version.ref = "hilt_version"}
+#hiltcompiler_kapt = {id = "androidx.hilt",name = "hilt-compiler",version.require = "1.2.0"}
 jetbrains-kotlin-kapt = {id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin"}
+
+
 
 [bundles]
 okhttp = ["okhttp1","okhttp2","okhttp3"]
 retrofit =["retrofit","retrofit-convertor-gson"]
 room = ["room_compiler","room_ktx","room_runtime"]
+hilt = ["dagger_hilt","dagger_compiler","hilt_navigation"]

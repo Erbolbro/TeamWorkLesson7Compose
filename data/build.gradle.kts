@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.jetbrains.kotlin.kapt)
 }
 
 android {
@@ -43,13 +42,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.bundles.retrofit)
-    // Hilt
-    //noinspection UseTomlInstead
-    implementation("com.google.dagger:hilt-android:2.51")
-    //noinspection UseTomlInstead
-    kapt("com.google.dagger:hilt-android-compiler:2.49")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
-//    //noinspection UseTomlInstead
+    implementation(libs.bundles.hilt)
+    implementation(libs.bundles.room)
     implementation("org.jetbrains:annotations:RELEASE_VERSION")
 }

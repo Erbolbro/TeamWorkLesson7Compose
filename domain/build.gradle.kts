@@ -10,4 +10,6 @@ java {
 dependencies {
     implementation(project(":presentation"))
     implementation(libs.kotlinx.coroutines.core)
+    implementation(project(":common"))
+    implementation(project(":common"))
 }

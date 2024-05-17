@@ -6,7 +6,7 @@ data class Character(
     val gender:String,
     val species: String = "",
     val created: String = "",
-    val origin: com.example.android4_5.data.remote.models.character.Origin,
+    val origin: com.example.data.remote.model.character.Origin,
     val name: String = "",
     val location: com.example.data.remote.model.character.Location,
     val episode: List<String>?,
