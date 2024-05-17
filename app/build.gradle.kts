@@ -73,20 +73,18 @@ dependencies {
     implementation(libs.kapt)
     implementation(project(":presentation"))
 
-    // Hilt
-    //noinspection UseTomlInstead
-    implementation("com.google.dagger:hilt-android:2.51")
-    //noinspection UseTomlInstead
-    kapt("com.google.dagger:hilt-android-compiler:2.49")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
-//    //noinspection UseTomlInstead
-    implementation("org.jetbrains:annotations:RELEASE_VERSION")
+    implementation(libs.bundles.hilt)
+    kapt(libs.hilt.navigation)
+    kapt(libs.dagger.compiler)
 
-    implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
     // OkHttp
-   implementation(libs.bundles.retrofit)
+    implementation(libs.bundles.retrofit)
+    implementation(libs.bundles.okhttp)
 
-    //AsyncImage
-    implementation("io.coil-kt:coil-compose:2.6.0")
+
+
+    // OkHttp
+    //noinspection UseTomlInstead
+//    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+
 }
