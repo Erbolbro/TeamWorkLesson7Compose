@@ -82,9 +82,4 @@ dependencies {
     implementation(libs.bundles.okhttp)
 
 
-
-    // OkHttp
-    //noinspection UseTomlInstead
-//    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
-
 }

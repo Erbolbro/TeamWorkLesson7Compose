@@ -3,7 +3,6 @@ package com.example.presentation.ui.activity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.domain.Either
 import com.example.domain.usecases.GetCharactersUseCase
 import com.example.utils.UIState
 import com.example.utils.base.BaseViewModel

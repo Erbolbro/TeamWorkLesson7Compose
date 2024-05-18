@@ -3,7 +3,6 @@ package com.example.utils.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.domain.Either
 import com.example.utils.UIState
 import kotlinx.coroutines.launch
 
