@@ -9,7 +9,6 @@ java {
 }
 dependencies {
     implementation(libs.compose.preview.renderer)
-    implementation(project(":domain"))
     implementation(project(":common"))
     implementation(project(":data"))
 }
